@@ -47,194 +47,206 @@
     </div>
 
     <!-- Campo -->
+    <form name="cadastroForm" onsubmit="return validateForm()">
+        <div id="nome">
 
-    <div id="nome">
+            <h4> Nome (*)</h4>
+            <input type="text" id="Inputnome" placeholder="Ex: Caio" title="Primeiro Nome" />
+            <br />
+            <label id="labelnome">
 
-        <h4> Nome (*)</h4>
-        <input type="text" id="Inputnome" placeholder="Ex: Caio" title="Primeiro Nome" />
-        <br />
-        <label id="labelnome">
+            </label>
 
-        </label>
+        </div>
 
-    </div>
+        <!-- Campo -->
 
-    <!-- Campo -->
+        <div id="sobrenome">
 
-    <div id="sobrenome">
+            <h4> Sobrenome (*)</h4>
+            <input type="text" id="Inputsobrenome" placeholder="Ex: Antunes Gonçalves" />
+            <label id="labelsobrenome">
 
-        <h4> Sobrenome (*)</h4>
-        <input type="text" id="Inputsobrenome" placeholder="Ex: Antunes Gonçalves" />
-        <label id="labelsobrenome">
+            </label>
 
-        </label>
+        </div>
 
-    </div>
+        <!-- Campo -->
 
-    <!-- Campo -->
+        <div id="cpf">
 
-    <div id="cpf">
+            <h4> CPF (*)</h4>
+            <!-- <input type="text" id="cpf_digitado" para uso do validador no JS, placeholder="Apenas números" minlength="11" maxlength="11" pattern="[^0-9]"/> -->
+            <input type="text" id="cpf_digitado" placeholder="Apenas números" />
+            <button type="button" class="btn btn-info" onclick="validacao()">Validar !</button>
+            <label id="labelcpf">
 
-        <h4> CPF (*)</h4>
-        <!-- <input type="text" id="cpf_digitado" para uso do validador no JS, placeholder="Apenas números" minlength="11" maxlength="11" pattern="[^0-9]"/> -->
-        <input type="text" id="cpf_digitado" placeholder="Apenas números" />
-        <label id="labelcpf">
+            </label>
 
-        </label>
+        </div>
+        <div id="alertasCPF">
+            <div id="notificaCPF">
+                <div id="accept" class="alert alert-sucess" style="display: none;" role="alert">
+                    <strong> CPF aceito</strong>
+                </div>
+                <div id="fail" class="alert alert-danger" style="display: none;" role="alert">
+                    <strong>CPF rejeitado</strong>
+                </div>
 
-    </div>
+            </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="rg">
+        <div id="rg">
 
-        <h4> RG</h4>
-        <input type="text" id="Inputrg" placeholder="Apenas números" />
+            <h4> RG</h4>
+            <input type="text" id="Inputrg" placeholder="Apenas números" />
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="containerSexo">
+        <div id="containerSexo">
 
-        <h4> Sexo</h4>
-        <select id="sexo">
+            <h4> Sexo</h4>
+            <select id="sexo">
 
-            <option value="Selecione" disabled selected> Selecione</option>
-            <option value="M">M</option>
-            <option value="F">F</option>
-            <option value="I">Indefinido</option>
-            <option value="O">Outro</option>
+                <option value="Selecione" disabled selected> Selecione</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+                <option value="I">Indefinido</option>
+                <option value="O">Outro</option>
 
-        </select>
+            </select>
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="fixo">
+        <div id="fixo">
 
-        <h4> Telefone Fixo</h4>
-        <input type="number" id="Inputfixo" placeholder="Ex: (33)3333-3333" />
+            <h4> Telefone Fixo</h4>
+            <input type="number" id="Inputfixo" placeholder="Ex: (33)3333-3333" />
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="celular">
+        <div id="celular">
 
-        <h4> Telefone Celular (*)</h4>
-        <input type="number" id="Inputcelular" placeholder="Ex: (33)93333-3333" />
-        <label id="labelcelular">
+            <h4> Telefone Celular (*)</h4>
+            <input type="number" id="Inputcelular" placeholder="Ex: (33)93333-3333" />
+            <label id="labelcelular">
 
-        </label>
+            </label>
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="cidade">
+        <div id="cidade">
 
-        <h4> Cidade</h4>
-        <input type="text" id="Inputcidade" placeholder="Ex: Governador Valadares" />
-    </div>
+            <h4> Cidade</h4>
+            <input type="text" id="Inputcidade" placeholder="Ex: Governador Valadares" />
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="Estado">
+        <div id="Estado">
 
-        <h4>Estado</h4>
-        <!-- <select id="Estado" >   -->
-        <select id="InputEstado">
-            <option value="Selecione" disabled selected> Selecione</option>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-        </select>
-    </div>
+            <h4>Estado</h4>
+            <!-- <select id="Estado" >   -->
+            <select id="InputEstado">
+                <option value="Selecione" disabled selected> Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="CEP">
+        <div id="CEP">
 
-        <h4> CEP</h4>
-        <input type="cep" id="cep" placeholder="Ex: 33333333 " />
+            <h4> CEP</h4>
+            <input type="cep" id="cep" placeholder="Ex: 33333333 " />
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="rua">
+        <div id="rua">
 
-        <h4> Rua (*)</h4>
-        <input type="rua" id="Inputrua" placeholder="Ex: Pedro Lessa " />
-        <label id="labelrua">
+            <h4> Rua (*)</h4>
+            <input type="rua" id="Inputrua" placeholder="Ex: Pedro Lessa " />
+            <label id="labelrua">
 
-        </label>
+            </label>
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="Numero">
+        <div id="Numero">
 
-        <h4> Número (*)</h4>
-        <input type="number" id="Inputnumero" placeholder="Ex: 123 " />
-        <label id="labelnumero">
+            <h4> Número (*)</h4>
+            <input type="number" id="Inputnumero" placeholder="Ex: 123 " />
+            <label id="labelnumero">
 
-        </label>
+            </label>
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="Bairro">
+        <div id="Bairro">
 
-        <h4> Bairro</h4>
-        <input type="text" id="bairro" placeholder="Ex: Lourdes " />
+            <h4> Bairro</h4>
+            <input type="text" id="bairro" placeholder="Ex: Lourdes " />
 
-    </div>
+        </div>
 
-    <!-- Campo -->
+        <!-- Campo -->
 
-    <div id="complemento">
+        <div id="complemento">
 
-        <h4> Complemento</h4>
-        <input type="text" id="complemento" placeholder="Ex: Apto 301 " />
+            <h4> Complemento</h4>
+            <input type="text" id="complemento" placeholder="Ex: Apto 301 " />
 
-    </div>
-   
-    <!-- Campo -->
+        </div>
 
-    <div id=cadastrar>
+        <!-- Campo -->
 
-        <input type="submit" value="Cadastrar" class="envio" />
+        <div id=cadastrar>
 
-    </div>
+            <input type="submit" value="Cadastrar" class="envio" />
+
+        </div>
     </form>
 
     <!-- Rodapé -->
@@ -244,7 +256,7 @@
         <p>@2021 - Powered by <strong>Caio Antunes</strong></p>
 
     </footer>
-    
+
     </div>
 
 
