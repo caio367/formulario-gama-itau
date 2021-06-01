@@ -67,10 +67,13 @@
 
 
             </div>
+
+            <!-- campo de espaçamento -->
+
             <form name="cadastroForm" onsubmit="return validateForm()">
                 <div class="row">
                     <div id="nome" class="campo">
-                        <h4> Nome <span style="color:red">(*)</span></h4>
+                        <h4> Nome <span style="color:red">(*)</span></h4> <!-- CAMPO NOME, com destaque em vermelho no simbolo de  obrigatório-->
                         
                         <input type="nome" id="Inputnome" placeholder="Ex: Caio" title="Primeiro Nome" />
                         <br />
@@ -78,25 +81,31 @@
                         </label>
                     </div>
                     <div id="sobrenome" class="campo">
-                        <h4> Sobrenome <span style="color:red">(*)</span></h4>
+                        <h4> Sobrenome <span style="color:red">(*)</span></h4> <!-- CAMPO SOBRENOME, com destaque em vermelho no simbolo de  obrigatório-->
                         <input type="sobrenome" id="Inputsobrenome" placeholder="Ex: Antunes Gonçalves" />
                         <label id="labelsobrenome">
 
                         </label>
                     </div>
                 </div>
+
+                <!-- campo de espaçamento -->
+
                 <div class="row">
                     <div id="cpf" class="campo">
-                        <h4> CPF <span style="color:red">(*)</span></h4>
+                        <h4> CPF <span style="color:red">(*)</span></h4> <!-- CAMPO CPF, com destaque em vermelho no simbolo de  obrigatório-->
+
                         <!--<input type="text" id="cpf_digitado" placeholder="Apenas números" minlength="11" maxlength="11" pattern="[^0-9]"/> -->
                          <input type="text" id="cpf_digitado" placeholder="Apenas números" /> 
 
                         <!-- <input type="text" id="cpf_digitado" placeholder="Apenas números"/> -->
                         <button type="button" class="btn btn-info" onclick="validacao()">Validar !</button> 
-                        <!-- O label cpf ia ser a mesma coisa de alertasCPF, logo deixe próximo do campo -->
+                        <!-- O label cpf ia ser a mesma coisa de alertasCPF, logo deixei próximo do campo -->
                         <label id="labelcpf">
                         </label>
-                        <!-- boa pratica do uso do id -->
+
+                        <!-- campo de espaçamento -->
+
                         <div id="alertasCPF">
                             <div id="notificaCPF">
                                 <div id="accept" class="alert alert-sucess" style="display: none;" role="alert">
@@ -117,19 +126,23 @@
                         </div>
                     </div>
 
+                    <!-- campo de espaçamento -->
+
                     <div id="rg" class="campo">
 
-                        <h4> RG</h4>
+                        <h4> RG</h4> <!-- CAMPO RG-->
                         <input type="text" id="Inputrg" placeholder="Apenas números" />
 
                     </div>
                 </div>
 
+                <!-- campo de espaçamento -->
+
                 <div class="row">
                     <div id="containerSexo" class="campo campo-s4">
 
-                        <h4> Sexo</h4>
-                        <select id="sexo">
+                        <h4> Sexo</h4> <!-- CAMPO SEXO-->
+                        <select id="sexo"> 
                             <option value="Selecione" disabled selected> Selecione</option>
                             <option value="M">M</option>
                             <option value="F">F</option>
@@ -139,16 +152,20 @@
                         </select>
                     </div>
 
+                    <!-- campo de espaçamento -->
+
                     <div id="fixo" class="campo campo-s4">
 
-                        <h4> Telefone Fixo</h4>
+                        <h4> Telefone Fixo</h4> <!-- CAMPO TELEFONE FIXO-->
                         <input type="number" id="Inputfixo" placeholder="Ex: (33)3333-3333" />
 
                     </div>
 
+                    <!-- campo de espaçamento -->
+
                     <div id="celular" class="campo campo-s4">
 
-                        <h4> Telefone Celular <span style="color:red">(*)</span></h4>
+                        <h4> Telefone Celular <span style="color:red">(*)</span></h4> <!-- CAMPO TELEFONE CELULAR, com destaque em vermelho no simbolo de  obrigatório-->
                         <input type="number" id="Inputcelular" placeholder="Ex: (33)93333-3333" />
                         <label id="labelcelular">
 
@@ -157,21 +174,24 @@
                     </div>
                 </div>
 
+                <!-- campo de espaçamento -->
+
                 <div class="dropdown-content">
 
                     <div class="row">
 
                         <div id="cidade" class="campo campo-s6">
 
-                            <h4> Cidade</h4>
+                            <h4> Cidade</h4> <!-- CAMPO CIDADE-->
                             <input type="text" id="Inputcidade" placeholder="Ex: Governador Valadares" />
 
                         </div>
 
+                        <!-- campo de espaçamento -->
+
                         <div id="Estado" class="campo campo-s3">
 
-                            <h4>Estado</h4>
-                            <!-- <select id="Estado" > Não pode ter mais de um id com o mesmo nome  -->
+                            <h4>Estado</h4> <!-- CAMPO ESTADO-->
                             <select id="InputEstado">
                                 <option value="Selecione" disabled selected> Selecione</option>
                                 <option value="AC">Acre</option>
@@ -204,21 +224,25 @@
                             </select>
                         </div>
 
+                        <!-- campo de espaçamento -->
+
                         <div id="CEP" class="campo campo-s3">
 
-                            <h4> CEP</h4>
+                            <h4> CEP</h4> <!-- CAMPO CEP-->
                             <input type="number" id="cep" placeholder="Ex: 33333333 " />
 
                         </div>
 
                     </div>
 
+                    <!-- campo de espaçamento -->
+
 
                     <div class="row">
 
                         <div id="rua" class="campo">
 
-                            <h4> Rua <span style="color:red">(*)</span></h4>
+                            <h4> Rua <span style="color:red">(*)</span></h4>  <!-- CAMPO RUA, com destaque em vermelho no simbolo de  obrigatório-->
                             <input type="text" id="Inputrua" placeholder="Ex: Pedro Lessa " />
                             <label id="labelrua">
 
@@ -226,26 +250,34 @@
 
                         </div>
 
+                        <!-- campo de espaçamento -->
+
                         <div id="Numero" class="campo">
-                            <h4> Número <span style="color:red">(*)</span></h4>
+                            <h4> Número <span style="color:red">(*)</span></h4> <!-- CAMPO NUMERO, com destaque em vermelho no simbolo de  obrigatório-->
                             <input type="number" id="Inputnumero" placeholder="Ex: 123 " />
                             <label id="labelnumero">
 
                             </label>
                         </div>
+
+                        <!-- campo de espaçamento -->
+
                         <div id="Bairro" class="campo">
-                            <h4> Bairro</h4>
+                            <h4> Bairro</h4> <!-- CAMPO BAIRRO-->
                             <input type="text" id="bairro" placeholder="Ex: Lourdes " />
                         </div>
                     </div>
+
+                    <!-- campo de espaçamento -->
+
                     <div class="row">
                         <div id="complemento" class="campo">
-                            <h4> Complemento</h4>
+                            <h4> Complemento</h4> <!-- CAMPO COMPLEMENTO-->
                             <input type="text" id="complemento" placeholder="Ex: Rua do posto de saúde " />
                         </div>
                     </div>
 
-                    <!-- Esse padrão é meio que base para nossa pagina ele garante o espaçamento uniforme e margin semelhante -->
+                    <!-- Padrão de base para que a página garanta o espaçamento uniforme e margin semelhante -->
                     <!-- <div class="row">
                     <div id=cadastrar class="campo"> -->
 

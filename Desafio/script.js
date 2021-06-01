@@ -34,7 +34,7 @@ function validaCPF(cpf) {
 
         var soma = 0;
         for (var i = 10; i > 1; i--) {
-            console.log("Abacate");
+            console.log("Valor1");
             console.log(typeof(numeros.charAt(10 - i)), numeros.charAt(10 - i));
             console.log(typeof(i), i);
             soma += numeros.charAt(10 - i) * i;
@@ -50,6 +50,7 @@ function validaCPF(cpf) {
         console.log("Tipo - 1º Digito",  typeof(digitos.charAt(0)*1));
 
         // validação do primeiro digito
+
         if (resultado != digitos.charAt(0)*1) {
             console.log("è diferente");
             document.getElementById('invalido').style.display = 'block';
@@ -68,7 +69,7 @@ function validaCPF(cpf) {
         console.log("Numeros", numeros);
 
         for ( var k = 11; k > 1; k--) {
-            console.log("Maça");
+            console.log("Valor2");
             console.log(typeof(numeros.charAt(11 - k)), numeros.charAt(11 - k));
             console.log(typeof(k), k);
             soma += numeros.charAt(11 - k) * k;
@@ -83,6 +84,7 @@ function validaCPF(cpf) {
 
 
         //Validação do segundo digito
+
         if (resultado != digitos.charAt(1)*1){
             document.getElementById('invalido').style.display = 'block';
             return false;
@@ -122,15 +124,18 @@ function validateForm() {
     checkvalidation = false //Esse é o correto -> true
 
     //Padrões UI
+
     var erro_obrigatorio = "Campo Obrigatório*"
     var erro_style = "red"
 
     // Objeto principal
+
     var pessoa = {} // criando um objeto Json
 
 
     // Capturando Dados
     // Capturando valor do input id=nome Inputsobrenome
+
     pessoa["nome"] = document.forms["cadastroForm"]["Inputnome"].value;
     pessoa["sobrenome"] = document.forms["cadastroForm"]["Inputsobrenome"].value;
     pessoa["cpf"] = document.forms["cadastroForm"]["cpf_digitado"].value
@@ -139,6 +144,7 @@ function validateForm() {
     pessoa["numero"] = document.forms["cadastroForm"]["Inputnumero"].value;
 
     // Captura de Labels - erros
+
     var labelnome = document.getElementById("labelnome");
     var labelsobrenome = document.getElementById("labelsobrenome");
     var labelcpf = document.getElementById("labelcpf");
@@ -150,6 +156,7 @@ function validateForm() {
 
     // Grupos de validação obrigatoria
     // Nome
+
     if (pessoa["nome"]) { //caso seja igual a "", false
 
     } else {
