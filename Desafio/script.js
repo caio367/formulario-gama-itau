@@ -1,12 +1,12 @@
-// testando uma forma de desativar a caixa do HTML5 required
-// document.addEventListener('invalid', (
-// function () {
-//     return function (e) {
-//     e.preventDefault();
-//     document.getElementById("cpf_digitado").focus();
-//     };
-// }
-// )(), true);
+gambiara
+document.addEventListener('invalid', (
+ function () {
+    return function (e) {
+    e.preventDefault();
+     document.getElementById("cpf_digitado").focus();
+     };
+}
+)(), true);
 
 
 
@@ -29,48 +29,48 @@ function validaCPF(cpf) {
         var numeros = cpf.substring(0, 9);
         var digitos = cpf.substring(9);
 
-        console.log("Numeros", numeros);
-        console.log("Digitos", digitos);
+        console.log("Numeros",numeros);
+        console.log("Digitos",digitos);
 
         var soma = 0;
         for (var i = 10; i > 1; i--) {
             console.log("Abacate");
-            console.log(typeof (numeros.charAt(10 - i)), numeros.charAt(10 - i));
-            console.log(typeof (i), i);
+            console.log(typeof(numeros.charAt(10 - i)), numeros.charAt(10 - i));
+            console.log(typeof(i), i);
             soma += numeros.charAt(10 - i) * i;
         }
 
-
+        
         console.log(soma);
 
         var resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
 
         console.log("RESULTADO", resultado);
-        console.log("1º Digito", digitos.charAt(0) * 1);
-        console.log("Tipo - 1º Digito", typeof (digitos.charAt(0) * 1));
+        console.log("1º Digito",  digitos.charAt(0)*1);
+        console.log("Tipo - 1º Digito",  typeof(digitos.charAt(0)*1));
 
         // validação do primeiro digito
-        if (resultado != digitos.charAt(0) * 1) {
+        if (resultado != digitos.charAt(0)*1) {
             console.log("è diferente");
             document.getElementById('invalido').style.display = 'block';
             return false;
 
         }
-
+        
         console.log(
             digitos.toString().charAt(0) + ' é a primeira posição da variavel soma'
         );
 
-        soma = 0;
+        soma = 0;        
 
-
+        
         numeros = cpf.substring(0, 10);
         console.log("Numeros", numeros);
 
-        for (var k = 11; k > 1; k--) {
+        for ( var k = 11; k > 1; k--) {
             console.log("Maça");
-            console.log(typeof (numeros.charAt(11 - k)), numeros.charAt(11 - k));
-            console.log(typeof (k), k);
+            console.log(typeof(numeros.charAt(11 - k)), numeros.charAt(11 - k));
+            console.log(typeof(k), k);
             soma += numeros.charAt(11 - k) * k;
         }
         console.log(soma);
@@ -78,12 +78,12 @@ function validaCPF(cpf) {
         resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
 
         console.log("RESULTADO", resultado);
-        console.log("2º Digito", digitos.charAt(1) * 1);
-        console.log("Tipo - 2º Digito", typeof (digitos.charAt(1) * 1));
+        console.log("2º Digito",  digitos.charAt(1)*1);
+        console.log("Tipo - 2º Digito",  typeof(digitos.charAt(1)*1));
 
 
         //Validação do segundo digito
-        if (resultado != digitos.charAt(1) * 1) {
+        if (resultado != digitos.charAt(1)*1){
             document.getElementById('invalido').style.display = 'block';
             return false;
         }
@@ -126,7 +126,7 @@ function validateForm() {
     var erro_style = "red"
 
     // Objeto principal
-    var pessoa = {} // criando um objeto 
+    var pessoa = {} // criando um objeto Json
 
 
     // Capturando Dados
@@ -166,7 +166,7 @@ function validateForm() {
         checkvalidation = false
     }
 
-
+    
     //Validação CPF
 
     if (pessoa["cpf"]) {
@@ -201,8 +201,8 @@ function validateForm() {
         checkvalidation = false
     }
 
-
-
+    
+    
 
 
     //Validação Email
@@ -213,6 +213,12 @@ function validateForm() {
 
     if (!checkvalidation) {
         alert("Formulário Inválido, verifique as informações e tente novamente!!!")
+    }
+
+    else {alert("Formulário registrado com sucesso, obrigado por se cadastrar!!!")
+
+
+
     }
 
     console.log("Terminou a função");

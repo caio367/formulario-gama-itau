@@ -1,0 +1,19 @@
+Desafio Itau
+
+
+ETAPAS:
+1 - Montar o Layout base (preferencia com diretrizes de alguma instituição, Google, W3C, Microsoft)
+    Precisa dar uma pesquisada em layouts mais interessantes
+
+
+2 - Montar as telas base no html
+    Esta no jeito já
+
+3 - Colocar estilos em css
+
+
+4 - Restrição de formulários com js e css
+    Verificar como eles desejam entregar e montar um fluxo para tratar os dados
+
+5 - Firulas adicionais, como transições e art
+    Juntamente ao Layout Base

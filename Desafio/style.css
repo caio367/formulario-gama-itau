@@ -1,0 +1,236 @@
+/* Root */
+body{
+    margin: 0;
+    padding: 0px;
+    
+}
+
+
+/* Cores do layout */
+.text-color1{
+    color: #3ea9f5;
+}
+
+.text-color2{
+    color: white;
+}
+
+.text-color3{
+    color: #3ea9f5;
+}
+
+.bg-color1{
+    background-color: #3ea9f5;
+}
+
+.bg-color2{
+    background-color: #3ea9f5;
+}
+
+.bg-color3{
+    background-color: #3ea9f5;
+}
+
+
+/* Diretrizes de espaçamento */
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 5px solid #0000ff;
+}
+
+.width-1{
+    width: 70%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+
+}
+
+nav a{ 
+display: inline-block;
+border:1px solid #0000ff;
+width:6.0em;
+font:0.92em;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+background:#fefe01;
+color: #000000;
+padding:0  0.2em 0.2em  0;
+text-decoration:none;
+margin: 0 20px;
+border-radius: 7%;
+flex-direction: column;
+font-size: 20px;
+
+
+}
+
+nav{
+    text-align: center;
+
+}
+
+#logo{
+   width: 35%;
+   
+   display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 50%;
+}
+
+header{
+    border-bottom: 5px solid #0000ff;
+    background-color: #ff6100;
+}
+
+#titulo{
+font-size: x-large;
+display: flex;
+margin: auto;
+justify-content: center;
+
+
+
+}
+
+#subtitulo{
+font-size: medium;
+display: flex;
+margin: auto;
+justify-content: center;
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+#cadastrar{text-align: center}
+.envio{
+    width: 280px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #eee;
+    border-radius: 11px;
+    background-color: white;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+
+
+/* Elementos */
+
+/* Formulario */
+.titulo-section{
+    padding: 1em;
+    line-height: 0px;
+} 
+
+/* dica: vimos que existe a necessidade de criar dois contextos de campo em relacao ao tamanho */
+.campo{
+    color: white;
+    width: 100%;
+    padding: 1em;
+}
+
+/* utilizar algo parecido com o bootstrap, considera que a linha tem um tamanho de 12 unidades*/
+
+/*Corresponde a 3 unidade ou 12/3 = 4  => largura: 100/4=25%*/
+.campo-s3{
+    width: 25%;
+}
+
+/*Corresponde a 4 unidade ou 12/4 = 3  =>largura: 100/3=33%*/
+.campo-s4{
+    width: 33%;
+}
+
+/*Corresponde a 8 unidade ou 12/8 = 1,5  =>largura: 100/1,5=66,67%*/
+.campo-s8{
+    width: 66.67%;
+}
+
+
+
+.campo > h4{
+    margin-bottom: 0.5em;
+}
+/* Esquecemos de selecionar o select com estilo de campo */
+.campo > input, .campo > select{
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 11px;
+}
+
+/* Arrumei o botão para manter o padrão html <row><campo><input/></campo></row> */
+/* experiemente comentar esse estilo abaixo */
+.campo > input[type="submit"]{
+    width: fit-content;
+    font-size: large;
+    height: initial;
+    border: none;
+    border-radius: 11px;
+}
+/* ********** */
+
+/* Rodape */
+/*.footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    background-color: darkblue;
+    padding: 15px 20px;
+    flex-direction: row;
+    
+
+}
+
+
+
+/* Variações de telas */
+
+@media (min-width: 768px) {
+    
+}
+
+
+@media (min-width: 769px) , (min-height:769px) and (orientation: landscape) {
+
+}
+
+@media (min-width: 1200px) {
+
+}    
+
+
+/*Tipografia*/
+/* *{ */
+    /* font-family: 'Fira Sans', sans-serif; */
+/* } */
+
+
+
+
+
+/*Geral*/
+    /* body{
+        background-image: url(../assets/69_mobile.webp);  
+         Center and scale the image nicely 
+        background-size: cover;
+        
+    }*/
