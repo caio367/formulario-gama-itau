@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <link href="./style.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="desafio/icone22.png">
+   <!-- <link rel="icon" type="image/png" href="desafio/icone22.png">-->
     <title> Desafio Itaú</title>
 
     
@@ -226,11 +226,13 @@
 
                         <!-- campo de espaçamento -->
 
-                        <div id="CEP" class="campo campo-s3">
+                        <div id="cep" class="campo campo-s3">
 
-                            <h4> CEP</h4> <!-- CAMPO CEP-->
-                            <input type="number" id="cep" placeholder="Ex: 33333333 " />
+                            <h4> CEP <span style="color:red">(*)</span> </h4> <!-- CAMPO CEP-->
+                            <input type="number" id="Inputcep" placeholder="Ex: 33333333 " />
+                            <label id="labelcep">
 
+                            </label>
                         </div>
 
                     </div>
@@ -263,7 +265,7 @@
                         <!-- campo de espaçamento -->
 
                         <div id="Bairro" class="campo">
-                            <h4> Bairro</h4> <!-- CAMPO BAIRRO-->
+                            <h4> Bairro </h4> <!-- CAMPO BAIRRO-->
                             <input type="text" id="bairro" placeholder="Ex: Lourdes " />
                         </div>
                     </div>

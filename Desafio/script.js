@@ -1,12 +1,4 @@
-gambiara
-document.addEventListener('invalid', (
- function () {
-    return function (e) {
-    e.preventDefault();
-     document.getElementById("cpf_digitado").focus();
-     };
-}
-)(), true);
+
 
 
 
@@ -142,6 +134,7 @@ function validateForm() {
     pessoa["celular"] = document.forms["cadastroForm"]["Inputcelular"].value;
     pessoa["rua"] = document.forms["cadastroForm"]["Inputrua"].value;
     pessoa["numero"] = document.forms["cadastroForm"]["Inputnumero"].value;
+    pessoa["cep"] = document.forms["cadastroForm"]["Inputcep"].value;
 
     // Captura de Labels - erros
 
@@ -151,7 +144,7 @@ function validateForm() {
     var labelcelular = document.getElementById("labelcelular");
     var labelrua = document.getElementById("labelrua");
     var labelnumero = document.getElementById("labelnumero");
-
+    var labelcep = document.getElementById("labelcep");
 
 
     // Grupos de validação obrigatoria
@@ -208,6 +201,13 @@ function validateForm() {
         checkvalidation = false
     }
 
+    if (pessoa["cep"]) {
+
+    } else {
+        labelcep.innerText = erro_obrigatorio
+        labelcep.style.color = erro_style
+        checkvalidation = false
+    }
     
     
 
