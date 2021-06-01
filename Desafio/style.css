@@ -190,15 +190,16 @@ justify-content: center;
 /* ********** */
 
 /* Rodape */
-/*.footer {
+
+#rodape {
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    margin: auto;
+    bottom: 0; 
     width: 100%;
-    background-color: darkblue;
-    padding: 15px 20px;
-    flex-direction: row;
+    background-color: #ff6100;
+    padding: 30px;
+    position: fixed;
+    padding-bottom: 30px;
+    
     
 
 }
